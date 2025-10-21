@@ -9,7 +9,7 @@
 
 - 👨‍💻 All of my projects are available at [https://dhairyasinghhariom.github.io/DhairySingh-Portfolio-/](https://dhairyasinghhariom.github.io/DhairySingh-Portfolio-/)
 
-- 💬 Ask me about **react**
+
 
 - 📫 How to reach me **sdhairya192@gmail.com**
 
