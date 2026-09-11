@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR Code Generator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <p>Enter your text or URL:</p>
-    <input type="text" id="qrText" placeholder="Text or URL">
-    <div id="imgBox">
-        <img id="qrImage" src="" alt="QR Code">
-    </div>
-    <button onclick="generateQRCode()">Generate QR Code</button>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🌤️ Dynamic Weather Dashboard</h1>
+      <input type="text" id="cityInput" placeholder="Enter city name..." />
+      <button id="searchBtn">Search</button>
+    </header>
 
-  <script>
-    function generateQRCode() {
-      let qrText = document.getElementById("qrText").value.trim();
-      let qrImage = document.getElementById("qrImage");
-      let imgBox = document.getElementById("imgBox");
+    <main>
+      <section class="current-weather">
+        <h2 id="location">--</h2>
+        <p id="date">--</p>
+        <h3 id="temperature">--°C</h3>
+        <p id="condition">--</p>
+        <div class="details">
+          <p>💧 Humidity: <span id="humidity">--%</span></p>
+          <p>🌪️ Wind: <span id="wind">-- km/h</span></p>
+        </div>
+      </section>
 
-      if (qrText.length === 0) {
-        alert("Please enter text or URL");
-        return;
-      }
+      <section class="forecast">
+        <h2>5-Day Forecast</h2>
+        <div id="forecastContainer" class="forecast-grid"></div>
+      </section>
+    </main>
 
-      qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" + encodeURIComponent(qrText);
-      imgBox.style.display = "block";
-    }
-  </script>
-</body>
+    <footer>
+      <p>Made with ❤️ using OpenWeatherMap API</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
