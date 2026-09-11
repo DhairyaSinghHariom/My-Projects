@@ -1,0 +1,71 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom, #74ebd5, #9face6);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+input {
+  padding: 10px;
+  width: 200px;
+  border: none;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #333;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.current-weather {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  width: 300px;
+  margin-bottom: 2rem;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.forecast-card {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+footer {
+  margin-top: auto;
+  padding: 1rem;
+  color: #444;
+}
